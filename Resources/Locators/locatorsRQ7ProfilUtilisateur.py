@@ -1,0 +1,10 @@
+#locators vider corbeille
+link_HeaderUser = "//span[@id='HEADER_USER_MENU_POPUP_text']"
+link_MonProfil = "//span[@title='Page Profil de l'utilisateur']"
+NomPageMonProfil = "//span[@title='Page Profil de l'utilisateur']"
+link_Corbeille = "//a[normalize-space()='Corbeille']"
+MenuPageCorbeille = "//div[@class='share-header-title']"
+vNomPageCorbeille = "Corbeille de l'utilisateur"
+link_Supprimer = "//div[@class='empty-button']//button[@type='button']"
+txt_MsgConfirSupCorbeille = "//div[normalize-space()='Cette action supprime définitivement le ou les éléments. Êtes-vous sûr ?']"
+btn_Login_OkSupCorbeille = "//button[text()='OK']"

@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221028 23:55:24.166" rpa="false" schemaversion="3">
+<suite id="s1" name="RQ6.BF6.6RetirerUnPanneauDansUnTypePersonnalise" source="C:\Users\iurie\PycharmProjects\ProjetDeSyntheseRobot\Scripts\RQ6.BF6.6RetirerUnPanneauDansUnTypePersonnalise.robot">
+<test id="s1-t1" name="Retirer Un Panneau Dans Un Type Personnalise" line="17">
+<kw name="Login" library="Login">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221028 23:55:24.441" endtime="20221028 23:55:24.442"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221028 23:55:24.442" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8089/share/page/'.</msg>
+<status status="PASS" starttime="20221028 23:55:24.442" endtime="20221028 23:55:26.054"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221028 23:55:26.054" endtime="20221028 23:55:26.195"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_UserName}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:26.196" level="INFO">Typing text '6171310' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20221028 23:55:26.196" endtime="20221028 23:55:26.271"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:26.271" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20221028 23:55:26.271" endtime="20221028 23:55:26.340"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:26.341" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Connexion')]'.</msg>
+<status status="PASS" starttime="20221028 23:55:26.340" endtime="20221028 23:55:27.104"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lblTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:27.104" endtime="20221028 23:55:27.127"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${lblTitle}</arg>
+<arg>Tableau de bord de</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221028 23:55:27.146" level="INFO">Element 'xpath=//h1[@id='HEADER_TITLE']/span' contains text 'Tableau de bord de'.</msg>
+<status status="PASS" starttime="20221028 23:55:27.127" endtime="20221028 23:55:27.146"/>
+</kw>
+<status status="PASS" starttime="20221028 23:55:24.441" endtime="20221028 23:55:27.146"/>
+</kw>
+<kw name="Creer un modele" library="CreerModele">
+<arg>${vEspacenom}</arg>
+<arg>${vPrefix}</arg>
+<arg>${vNomModele}</arg>
+<arg>${vCreateur}</arg>
+<arg>${vDescription}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_HeaderAdmin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:27.147" level="INFO">Clicking element 'xpath=//a[@title='Outils admin']'.</msg>
+<status status="PASS" starttime="20221028 23:55:27.147" endtime="20221028 23:55:29.587"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lbl_TitreOutilsAdmin}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221028 23:55:29.587" endtime="20221028 23:55:29.602"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_GestMod}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:29.602" level="INFO">Clicking element '//a[@title='Gestionnaire de modèles']'.</msg>
+<status status="PASS" starttime="20221028 23:55:29.602" endtime="20221028 23:55:30.576"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_MenuModele}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221028 23:55:30.577" endtime="20221028 23:55:30.642"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_cliqueModele}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:30.643" level="INFO">Clicking element 'xpath=//span[text()='Créer un modèle']'.</msg>
+<status status="PASS" starttime="20221028 23:55:30.642" endtime="20221028 23:55:30.746"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:55:33.750" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221028 23:55:30.746" endtime="20221028 23:55:33.750"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Champs_EspNome}</arg>
+<arg>${vEspacenom}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:33.750" level="INFO">Typing text 'TestModele' into text field 'xpath=//input[@name='namespace']'.</msg>
+<status status="PASS" starttime="20221028 23:55:33.750" endtime="20221028 23:55:33.842"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Champs_Prefix}</arg>
+<arg>${vPrefix}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:33.842" level="INFO">Typing text 'PrefixTestModele' into text field 'xpath=//input[@name='prefix']'.</msg>
+<status status="PASS" starttime="20221028 23:55:33.842" endtime="20221028 23:55:33.938"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Champ_Nom}</arg>
+<arg>${vNomModele}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:33.939" level="INFO">Typing text 'NomTestModele' into text field '//input[@name='name']'.</msg>
+<status status="PASS" starttime="20221028 23:55:33.938" endtime="20221028 23:55:34.030"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Champs_Author}</arg>
+<arg>${vCreateur}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:34.031" level="INFO">Typing text 'Testeur QA logiciels' into text field 'xpath=//input[@name='author']'.</msg>
+<status status="PASS" starttime="20221028 23:55:34.030" endtime="20221028 23:55:34.139"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Champs_Description}</arg>
+<arg>${vDescription}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:34.140" level="INFO">Typing text 'Description Test' into text field 'xpath=//textarea[@class='dijitTextBox dijitTextArea']'.</msg>
+<status status="PASS" starttime="20221028 23:55:34.139" endtime="20221028 23:55:34.245"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_cliqueCreer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:34.246" level="INFO">Clicking element 'xpath=//span[text()='Créer']'.</msg>
+<status status="PASS" starttime="20221028 23:55:34.246" endtime="20221028 23:55:34.284"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:55:37.287" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221028 23:55:34.284" endtime="20221028 23:55:37.287"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${txt_nomModeleP1}${vNomModele}${txt_nomModeleP2}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221028 23:55:37.287" endtime="20221028 23:55:37.299"/>
+</kw>
+<status status="PASS" starttime="20221028 23:55:27.146" endtime="20221028 23:55:37.299"/>
+</kw>
+<kw name="Creer un type personnalise" library="CreeUnTypePersonnalise">
+<arg>${vPrefixeNomModele}</arg>
+<arg>${vNomModele}</arg>
+<arg>${vNomTypePerso}</arg>
+<arg>${vTypeParent}</arg>
+<arg>${vEtiquette}</arg>
+<arg>${vDescription}</arg>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${lnk_outilAdmin__E}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:37.300" level="INFO">Clicking link 'xpath://a[@href='/share/page/console/admin-console/application']'.</msg>
+<status status="PASS" starttime="20221028 23:55:37.300" endtime="20221028 23:55:39.699"/>
+</kw>
+<kw name="Wait Until Location Contains" library="SeleniumLibrary">
+<arg>${url_application__E}</arg>
+<doc>Waits until the current URL contains ``expected``.</doc>
+<status status="PASS" starttime="20221028 23:55:39.699" endtime="20221028 23:55:39.706"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>${lnk_gestionnaireModeles__E}</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:39.707" level="INFO">Clicking link 'xpath://a[@href='custom-model-manager']'.</msg>
+<status status="PASS" starttime="20221028 23:55:39.706" endtime="20221028 23:55:40.599"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lnk_modele_deb__E}${vNomModele}${lnk_modele_fin__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:40.599" endtime="20221028 23:55:40.866"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_modele_deb__E}${vNomModele}${lnk_modele_fin__E}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:40.867" level="INFO">Clicking element 'xpath://tr/td[1]//span[contains(text(),'NomTestModele')]'.</msg>
+<status status="PASS" starttime="20221028 23:55:40.866" endtime="20221028 23:55:40.916"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_creerType__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:40.916" endtime="20221028 23:55:40.944"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_creerType__E}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:40.944" level="INFO">Clicking element 'xpath://span[normalize-space()='Créer un type personnalisé']'.</msg>
+<status status="PASS" starttime="20221028 23:55:40.944" endtime="20221028 23:55:41.019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${dialog_creerType__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:41.020" endtime="20221028 23:55:41.046"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_nomType__E}</arg>
+<arg>${vNomTypePerso}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.047" level="INFO">Typing text 'NomeTestTypePerso' into text field '//input[@name='name']'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.046" endtime="20221028 23:55:41.149"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_choixTypeParent__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:41.149" endtime="20221028 23:55:41.396"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${txt_choixTypeParent__E}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.396" level="INFO">Clicking element '//span[@role='option']'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.396" endtime="20221028 23:55:41.447"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_choixTypeParent__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:41.447" endtime="20221028 23:55:41.467"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${txt_choixTypeParent__E}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.468" level="INFO">Clicking element '//span[@role='option']'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.468" endtime="20221028 23:55:41.513"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lst_parentType__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:41.513" endtime="20221028 23:55:41.534"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${opt_parentType_deb__E}${vTypeParent}${opt_parentType_fin__E}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.535" level="INFO">Clicking element '//div[@role='region']//td[contains(text(),'cm:content (Contenu)')]'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.534" endtime="20221028 23:55:41.579"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${txt_etiquetteType__E}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:41.579" endtime="20221028 23:55:41.598"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_etiquetteType__E}</arg>
+<arg>${vEtiquette}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.598" level="INFO">Typing text 'TestEtiquette' into text field 'xpath://form/div[3]//input[@name='title']'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.598" endtime="20221028 23:55:41.686"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_descriptionType__E}</arg>
+<arg>${vDescription}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.686" level="INFO">Typing text 'Description Test' into text field 'xpath://div[@class='control-row']//textarea[@name='description']'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.686" endtime="20221028 23:55:41.779"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_dialog_creerType__E}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:41.780" level="INFO">Clicking element 'xpath://span[@aria-labelledby='CMM_CREATE_TYPE_DIALOG_OK_label']'.</msg>
+<status status="PASS" starttime="20221028 23:55:41.780" endtime="20221028 23:55:41.823"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>4s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:55:45.826" level="INFO">Slept 4 seconds</msg>
+<status status="PASS" starttime="20221028 23:55:41.823" endtime="20221028 23:55:45.826"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Actions_TypePersonnalise_Debut}${vNomTypePerso}${Actions_TypePersonnalise_Fin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:45.828" level="INFO">Clicking element '//div[@class='alfresco-lists-AlfList__views rendered-view']/descendant::tr/descendant::span[contains(text(),'NomeTestTypePerso')]/ancestor::tr/descendant::td[5]/descendant::span[@class='alfresco-menus-AlfMenuBarPopup__text-wrapper']'.</msg>
+<status status="PASS" starttime="20221028 23:55:45.827" endtime="20221028 23:55:45.902"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_Concepteur}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:45.902" level="INFO">Clicking element '//div[@class='dijitPopup Popup']//td[contains(text(),'Concepteur de disposition')]'.</msg>
+<status status="PASS" starttime="20221028 23:55:45.902" endtime="20221028 23:55:45.954"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_DispParDefo}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:45.955" level="INFO">Clicking element '//span[normalize-space()='Appliquer la disposition par défaut']'.</msg>
+<status status="PASS" starttime="20221028 23:55:45.954" endtime="20221028 23:55:46.027"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:55:49.038" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221028 23:55:46.027" endtime="20221028 23:55:49.038"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_Appliquer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:49.040" level="INFO">Clicking element '//span[normalize-space()='Appliquer']'.</msg>
+<status status="PASS" starttime="20221028 23:55:49.039" endtime="20221028 23:55:49.089"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//span[normalize-space()='Enregistrer']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:49.089" level="INFO">Clicking element '//span[normalize-space()='Enregistrer']'.</msg>
+<status status="PASS" starttime="20221028 23:55:49.089" endtime="20221028 23:55:49.276"/>
+</kw>
+<status status="PASS" starttime="20221028 23:55:37.299" endtime="20221028 23:55:49.276"/>
+</kw>
+<kw name="Retirer Panneau Dans Un Type Personnalise" library="RetirerPanneauTypePerso">
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${url_TypePersoCocept}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20221028 23:55:49.277" level="INFO">Opening url 'http://localhost:8089/share/page/console/admin-console/custom-model-manager#view=editor&amp;model=NomTestModele&amp;type=NomeTestTypePerso'</msg>
+<status status="PASS" starttime="20221028 23:55:49.277" endtime="20221028 23:55:50.171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lbl_CoseptTypPerso1}${vNomModele} - ${vNomTypePerso}${lbl_CoseptTypPerso2}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:55:50.171" endtime="20221028 23:55:51.222"/>
+</kw>
+<kw name="Mouse Over" library="SeleniumLibrary">
+<arg>${img_MenuDaction}</arg>
+<doc>Simulates hovering the mouse over the element ``locator``.</doc>
+<msg timestamp="20221028 23:55:51.223" level="INFO">Simulating Mouse Over on element '//body/div/div/div/div/div/div/div/div/div[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='containerNode']/div/div[@data-dojo-attach-point='containerNode']/div/div[@widgetid='CMM_PANE_CONTAINER']/div[@data-dojo-attach-point='containerNode']/div[@aria-label='editor']/div/div[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='parentNode']/div[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='leftWidgets']/div[@data-dojo-attach-point='containerNode']/div[@widgetid='FORM_EDITOR']/form[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='containerNode']/div/div[@data-dojo-attach-point='_controlNode']/div/div[@data-dojo-attach-point='previewNode']/div/div/span[5]/img[1]'.</msg>
+<status status="PASS" starttime="20221028 23:55:51.223" endtime="20221028 23:55:51.518"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_DelPanneau}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:51.520" level="INFO">Clicking element '//div[@id='FORM_CANVAS']//span[@class='action delete']'.</msg>
+<status status="PASS" starttime="20221028 23:55:51.519" endtime="20221028 23:55:51.574"/>
+</kw>
+<kw name="Element Should Not Be Visible" library="SeleniumLibrary">
+<arg>${img_MenuDaction}</arg>
+<doc>Verifies that the element identified by ``locator`` is NOT visible.</doc>
+<msg timestamp="20221028 23:55:51.585" level="INFO">Element '//body/div/div/div/div/div/div/div/div/div[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='containerNode']/div/div[@data-dojo-attach-point='containerNode']/div/div[@widgetid='CMM_PANE_CONTAINER']/div[@data-dojo-attach-point='containerNode']/div[@aria-label='editor']/div/div[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='parentNode']/div[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='leftWidgets']/div[@data-dojo-attach-point='containerNode']/div[@widgetid='FORM_EDITOR']/form[@data-dojo-attach-point='containerNode']/div[@data-dojo-attach-point='containerNode']/div/div[@data-dojo-attach-point='_controlNode']/div/div[@data-dojo-attach-point='previewNode']/div/div/span[5]/img[1]' did not exist.</msg>
+<status status="PASS" starttime="20221028 23:55:51.575" endtime="20221028 23:55:51.585"/>
+</kw>
+<status status="PASS" starttime="20221028 23:55:49.277" endtime="20221028 23:55:51.586"/>
+</kw>
+<kw name="Supprimer le modele" library="SupprimerModele">
+<arg>${vNomModele}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_HeaderAdmin}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221028 23:55:51.587" endtime="20221028 23:55:51.598"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_HeaderAdmin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:51.598" level="INFO">Clicking element 'xpath=//a[@title='Outils admin']'.</msg>
+<status status="PASS" starttime="20221028 23:55:51.598" endtime="20221028 23:55:54.043"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_GestMod}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221028 23:55:54.043" endtime="20221028 23:55:54.060"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_GestMod}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:54.060" level="INFO">Clicking element '//a[@title='Gestionnaire de modèles']'.</msg>
+<status status="PASS" starttime="20221028 23:55:54.060" endtime="20221028 23:55:54.925"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${vNomModele}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221028 23:55:54.926" endtime="20221028 23:55:55.251"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:55:58.262" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221028 23:55:55.251" endtime="20221028 23:55:58.262"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_ActionsDebut}${vNomModele}${lnk_ActionsFin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:55:58.264" level="INFO">Clicking element '//span[contains(text(),'NomTestModele')]/ancestor::tr/descendant::span[@class='alfresco-menus-AlfMenuBarPopup__text-wrapper']'.</msg>
+<status status="PASS" starttime="20221028 23:55:58.263" endtime="20221028 23:55:58.317"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:56:01.326" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221028 23:55:58.317" endtime="20221028 23:56:01.326"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:56:01.328" level="INFO">Clicking element '//div[@class='dijitPopup Popup']//td[contains(text(),'Supprimer')]'.</msg>
+<status status="PASS" starttime="20221028 23:56:01.327" endtime="20221028 23:56:01.395"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221028 23:56:04.399" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221028 23:56:01.395" endtime="20221028 23:56:04.399"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${deleteConfirmation}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:56:04.401" level="INFO">Clicking element '//div[@id='CMM_DELETE_MODEL_DIALOG']//span[text()='Supprimer']'.</msg>
+<status status="PASS" starttime="20221028 23:56:04.400" endtime="20221028 23:56:04.452"/>
+</kw>
+<status status="PASS" starttime="20221028 23:55:51.586" endtime="20221028 23:56:04.452"/>
+</kw>
+<kw name="Logout" library="Logout">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:56:04.453" endtime="20221028 23:56:04.477"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:56:04.477" level="INFO">Clicking element 'id=HEADER_USER_MENU_POPUP'.</msg>
+<status status="PASS" starttime="20221028 23:56:04.477" endtime="20221028 23:56:04.518"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221028 23:56:04.518" endtime="20221028 23:56:04.540"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221028 23:56:04.540" level="INFO">Clicking element 'id=HEADER_USER_MENU_LOGOUT'.</msg>
+<status status="PASS" starttime="20221028 23:56:04.540" endtime="20221028 23:56:04.582"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221028 23:56:04.582" endtime="20221028 23:56:06.769"/>
+</kw>
+<status status="PASS" starttime="20221028 23:56:04.452" endtime="20221028 23:56:06.769"/>
+</kw>
+<status status="PASS" starttime="20221028 23:55:24.439" endtime="20221028 23:56:06.771"/>
+</test>
+<status status="PASS" starttime="20221028 23:55:24.169" endtime="20221028 23:56:06.775"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RQ6.BF6.6RetirerUnPanneauDansUnTypePersonnalise">RQ6.BF6.6RetirerUnPanneauDansUnTypePersonnalise</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

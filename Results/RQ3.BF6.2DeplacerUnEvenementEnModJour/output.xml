@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.10.5 on win32)" generated="20221023 19:11:50.409" rpa="false" schemaversion="3">
+<suite id="s1" name="RQ3.BF6.2DeplacerUnEvenementEnModJour" source="C:\Users\iurie\PycharmProjects\ProjetDeSyntheseRobot\Scripts\RQ3.BF6.2DeplacerUnEvenementEnModJour.robot">
+<test id="s1-t1" name="Deplacer Un Evinement En Mod Jour" line="19">
+<kw name="Login" library="Login">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<arg>${vUsername}</arg>
+<arg>${vPassword}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221023 19:11:50.650" endtime="20221023 19:11:50.651"/>
+</kw>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${vURL}</arg>
+<arg>${vBrowser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221023 19:11:50.651" level="INFO">Opening browser 'chrome' to base url 'http://localhost:8089/share/page/'.</msg>
+<status status="PASS" starttime="20221023 19:11:50.651" endtime="20221023 19:11:52.459"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20221023 19:11:52.460" endtime="20221023 19:11:52.588"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_UserName}</arg>
+<arg>${vUsername}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:52.589" level="INFO">Typing text '6171310' into text field 'name=username'.</msg>
+<status status="PASS" starttime="20221023 19:11:52.588" endtime="20221023 19:11:52.667"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_Password}</arg>
+<arg>${vPassword}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:52.668" level="INFO">Typing text '12345678' into text field 'name=password'.</msg>
+<status status="PASS" starttime="20221023 19:11:52.668" endtime="20221023 19:11:52.747"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${btn_Login}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:52.748" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Connexion')]'.</msg>
+<status status="PASS" starttime="20221023 19:11:52.747" endtime="20221023 19:11:53.659"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${lblTitle}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221023 19:11:53.659" endtime="20221023 19:11:53.682"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${lblTitle}</arg>
+<arg>Tableau de bord de</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221023 19:11:53.700" level="INFO">Element 'xpath=//h1[@id='HEADER_TITLE']/span' contains text 'Tableau de bord de'.</msg>
+<status status="PASS" starttime="20221023 19:11:53.682" endtime="20221023 19:11:53.701"/>
+</kw>
+<status status="PASS" starttime="20221023 19:11:50.649" endtime="20221023 19:11:53.701"/>
+</kw>
+<kw name="Creer site" library="CreerSite">
+<arg>${vTypeSite}</arg>
+<arg>${vNomSite}</arg>
+<arg>${vUrlSite}</arg>
+<arg>${vDescriptionSite}</arg>
+<arg>${vVisibiliteSite}</arg>
+<kw name="Set Selenium Timeout" library="SeleniumLibrary">
+<arg>${TIMEOUT}</arg>
+<doc>Sets the timeout that is used by various keywords.</doc>
+<status status="PASS" starttime="20221023 19:11:53.702" endtime="20221023 19:11:53.703"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_sites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:53.704" level="INFO">Clicking element '//span[@id='HEADER_SITES_MENU_text']'.</msg>
+<status status="PASS" starttime="20221023 19:11:53.703" endtime="20221023 19:11:53.754"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:11:55.756" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221023 19:11:53.754" endtime="20221023 19:11:55.756"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_creerSite}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:55.757" level="INFO">Clicking element '//td[@id='HEADER_SITES_MENU_CREATE_SITE_text']'.</msg>
+<status status="PASS" starttime="20221023 19:11:55.756" endtime="20221023 19:11:55.856"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${liste_Type_site}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:11:55.856" endtime="20221023 19:11:55.867"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${liste_Type_site}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:55.869" level="INFO">Clicking element '//td[@class='dijitReset dijitRight dijitButtonNode dijitArrowButton dijitDownArrowButton dijitArrowButtonContainer']'.</msg>
+<status status="PASS" starttime="20221023 19:11:55.868" endtime="20221023 19:11:55.926"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${choix_typeSiteDebut}${vTypeSite}${choix_typeSiteFin}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:11:55.926" endtime="20221023 19:11:55.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${choix_typeSiteDebut}${vTypeSite}${choix_typeSiteFin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:55.937" level="INFO">Clicking element '//td[contains(text(),'Site de Collaboration')]'.</msg>
+<status status="PASS" starttime="20221023 19:11:55.936" endtime="20221023 19:11:55.970"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_nomSite}</arg>
+<arg>${vNomSite}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:55.970" level="INFO">Typing text 'SiteTestIurie' into text field '//input[@name='title' or @name='titre']'.</msg>
+<status status="PASS" starttime="20221023 19:11:55.970" endtime="20221023 19:11:56.085"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${txt_siteId}</arg>
+<arg>${vUrlSite}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:56.086" level="INFO">Typing text 'site-test-iurie' into text field '//input[@name='shortName']'.</msg>
+<status status="PASS" starttime="20221023 19:11:56.085" endtime="20221023 19:11:56.191"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${input_descriptionSite}</arg>
+<arg>${vDescriptionSite}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:56.191" level="INFO">Typing text 'DescriptionSite Test' into text field '//textarea[@name='description']'.</msg>
+<status status="PASS" starttime="20221023 19:11:56.191" endtime="20221023 19:11:56.290"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${liste_visibiliteSiteDebut}${vVisibiliteSite}${liste_visibiliteSiteFin}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:56.291" level="INFO">Clicking element '//input[@name='visibility' and @value='PUBLIC']'.</msg>
+<status status="PASS" starttime="20221023 19:11:56.290" endtime="20221023 19:11:56.339"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:11:59.342" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 19:11:56.340" endtime="20221023 19:11:59.342"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_CreateSite}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:11:59.342" level="INFO">Clicking element '//span[@id='CREATE_SITE_DIALOG_OK_label']'.</msg>
+<status status="PASS" starttime="20221023 19:11:59.342" endtime="20221023 19:11:59.386"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:02.400" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 19:11:59.386" endtime="20221023 19:12:02.400"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${vNomSite}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:02.401" endtime="20221023 19:12:02.419"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20221023 19:12:02.419" endtime="20221023 19:12:02.715"/>
+</kw>
+<status status="PASS" starttime="20221023 19:11:53.701" endtime="20221023 19:12:02.715"/>
+</kw>
+<kw name="Ajouter Un Module A Un Site" library="AjouterUnModuleAUnSite">
+<arg>${vNomSite}</arg>
+<arg>${NomModule}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${BTN_SITES}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:02.717" endtime="20221023 19:12:02.730"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_SITES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:02.731" level="INFO">Clicking element 'id=HEADER_SITES_MENU_text'.</msg>
+<status status="PASS" starttime="20221023 19:12:02.730" endtime="20221023 19:12:02.779"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${BTN_MESSITES}</arg>
+<arg>10</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:02.780" endtime="20221023 19:12:03.020"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_MESSITES}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:03.021" level="INFO">Clicking element '//a[@title='Mes sites']'.</msg>
+<status status="PASS" starttime="20221023 19:12:03.021" endtime="20221023 19:12:03.434"/>
+</kw>
+<kw name="Wait Until Page Contains" library="SeleniumLibrary">
+<arg>${NomSite}</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:03.434" endtime="20221023 19:12:03.443"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${LNK_SITE}${NomSite}${LNK_FIN}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:03.443" level="INFO">Clicking element '//a[normalize-space()='SiteTestIurie']'.</msg>
+<status status="PASS" starttime="20221023 19:12:03.443" endtime="20221023 19:12:03.963"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_ROUEDENTEE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:03.964" level="INFO">Clicking element '//img[@title='Options de configuration de site']'.</msg>
+<status status="PASS" starttime="20221023 19:12:03.963" endtime="20221023 19:12:04.015"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_PERSONALISATIONSITE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:04.016" level="INFO">Clicking element '//a[@title='Personnaliser le site']'.</msg>
+<status status="PASS" starttime="20221023 19:12:04.015" endtime="20221023 19:12:06.590"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${LNK_MODULEADEPLACER}${NomModule}${LNK_FINMODULEADEPLACER}</arg>
+<arg>${LNK_ZONESITEPAGE}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" starttime="20221023 19:12:06.590" endtime="20221023 19:12:07.176"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:09.187" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221023 19:12:07.176" endtime="20221023 19:12:09.187"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${BTN_OKMODULE}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:09.187" level="INFO">Clicking element '//button[normalize-space()='OK']'.</msg>
+<status status="PASS" starttime="20221023 19:12:09.187" endtime="20221023 19:12:09.242"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:11.257" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20221023 19:12:09.242" endtime="20221023 19:12:11.257"/>
+</kw>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<arg>${LNK_BARREMENU}</arg>
+<arg>${NomModule}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<msg timestamp="20221023 19:12:11.305" level="INFO">Element '//div[@class='navigation-menu']' contains text 'Calendrier'.</msg>
+<status status="PASS" starttime="20221023 19:12:11.258" endtime="20221023 19:12:11.305"/>
+</kw>
+<status status="PASS" starttime="20221023 19:12:02.716" endtime="20221023 19:12:11.305"/>
+</kw>
+<kw name="Creer un Evenement" library="CreerUnEvenement">
+<arg>${vNomSite}</arg>
+<arg>${vQuoiNonEven}</arg>
+<arg>${vOu}</arg>
+<arg>${vDescription}</arg>
+<arg>${vTags}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Sites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:11.307" level="INFO">Clicking element '//span[@id='HEADER_SITES_MENU_text']'.</msg>
+<status status="PASS" starttime="20221023 19:12:11.307" endtime="20221023 19:12:11.353"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${NomListe}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:11.353" endtime="20221023 19:12:11.579"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MesSites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:11.579" level="INFO">Clicking element '//a[normalize-space()='Mes sites']'.</msg>
+<status status="PASS" starttime="20221023 19:12:11.579" endtime="20221023 19:12:11.913"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MonSite}${vNomSite}${FinMonSite}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:11.914" level="INFO">Clicking element '//a[normalize-space()='SiteTestIurie']'.</msg>
+<status status="PASS" starttime="20221023 19:12:11.913" endtime="20221023 19:12:12.443"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${MenuMonSite}${vNomSite}${FinMenuMonSite}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:12.443" endtime="20221023 19:12:12.455"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickCalendrier}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:12.455" level="INFO">Clicking element '//a[normalize-space()='Calendrier']'.</msg>
+<status status="PASS" starttime="20221023 19:12:12.455" endtime="20221023 19:12:12.996"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${NomCalendrier}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:12.996" endtime="20221023 19:12:13.010"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${NomCalendrier}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:13.011" level="INFO">Clicking element '//button[@id='template_x002e_toolbar_x002e_calendar_x0023_default-addEvent-button-button']'.</msg>
+<status status="PASS" starttime="20221023 19:12:13.010" endtime="20221023 19:12:13.067"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${PageFormulaire}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:13.067" endtime="20221023 19:12:13.299"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Quoi}</arg>
+<arg>${vQuoiNonEven}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:13.300" level="INFO">Typing text 'Deplacer evenement' into text field '//input[@id='eventEditPanel-title']'.</msg>
+<status status="PASS" starttime="20221023 19:12:13.299" endtime="20221023 19:12:13.388"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Ou}</arg>
+<arg>${vOu}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:13.389" level="INFO">Typing text 'En mod Jour' into text field '//input[@id='eventEditPanel-location']'.</msg>
+<status status="PASS" starttime="20221023 19:12:13.388" endtime="20221023 19:12:13.491"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Descritption}</arg>
+<arg>${vDescription}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:13.491" level="INFO">Typing text 'Plus tard' into text field '//textarea[@id='eventEditPanel-description']'.</msg>
+<status status="PASS" starttime="20221023 19:12:13.491" endtime="20221023 19:12:13.587"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${Tags}</arg>
+<arg>${vTags}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:13.587" level="INFO">Typing text 'Test' into text field '//input[@id='eventEditPanel-tag-input-field']'.</msg>
+<status status="PASS" starttime="20221023 19:12:13.587" endtime="20221023 19:12:13.675"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>${Enregistrer}</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:13.675" level="INFO">Clicking button '//button[@id='eventEditPanel-ok-button']'.</msg>
+<status status="PASS" starttime="20221023 19:12:13.675" endtime="20221023 19:12:13.737"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20221023 19:12:13.737" endtime="20221023 19:12:14.076"/>
+</kw>
+<status status="PASS" starttime="20221023 19:12:11.306" endtime="20221023 19:12:14.077"/>
+</kw>
+<kw name="Deplacer Un Evinement" library="DeplacerEvenimentJour">
+<arg>${vNomSite}</arg>
+<arg>${vQuoiNonEven}</arg>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${Sites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:14.080" level="INFO">Clicking element '//span[@id='HEADER_SITES_MENU_text']'.</msg>
+<status status="PASS" starttime="20221023 19:12:14.079" endtime="20221023 19:12:14.125"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${NomListe}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:14.126" endtime="20221023 19:12:14.367"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MesSites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:14.369" level="INFO">Clicking element '//a[normalize-space()='Mes sites']'.</msg>
+<status status="PASS" starttime="20221023 19:12:14.368" endtime="20221023 19:12:14.720"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${MonSite}${vNomSite}${FinMonSite}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:14.720" level="INFO">Clicking element '//a[normalize-space()='SiteTestIurie']'.</msg>
+<status status="PASS" starttime="20221023 19:12:14.720" endtime="20221023 19:12:15.158"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${MenuMonSite}${vNomSite}${FinMenuMonSite}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:15.158" endtime="20221023 19:12:15.169"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${ClickCalendrier}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:15.169" level="INFO">Clicking element '//a[normalize-space()='Calendrier']'.</msg>
+<status status="PASS" starttime="20221023 19:12:15.169" endtime="20221023 19:12:15.578"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${btn_ModJour}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221023 19:12:15.579" endtime="20221023 19:12:15.617"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_ModJour}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:15.617" level="INFO">Clicking element '//button[normalize-space()='Jour']'.</msg>
+<status status="PASS" starttime="20221023 19:12:15.617" endtime="20221023 19:12:15.659"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221023 19:12:15.836" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221023 19:12:15.659" endtime="20221023 19:12:15.836"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:18.850" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 19:12:15.836" endtime="20221023 19:12:18.850"/>
+</kw>
+<kw name="Drag And Drop" library="SeleniumLibrary">
+<arg>${lnk_EvenDeb}${vQuoiNonEven}${lnk_EvenFin}</arg>
+<arg>${lnk_LocTarget}</arg>
+<doc>Drags the element identified by ``locator`` into the ``target`` element.</doc>
+<status status="PASS" starttime="20221023 19:12:18.851" endtime="20221023 19:12:19.451"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:22.457" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 19:12:19.451" endtime="20221023 19:12:22.457"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221023 19:12:22.600" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221023 19:12:22.458" endtime="20221023 19:12:22.600"/>
+</kw>
+<kw name="Drag And Drop By Offset" library="SeleniumLibrary">
+<arg>${lnk_EvenDeb}${vQuoiNonEven}${lnk_EvenFin}</arg>
+<arg>0</arg>
+<arg>-200</arg>
+<doc>Drags the element identified with ``locator`` by ``xoffset/yoffset``.</doc>
+<status status="PASS" starttime="20221023 19:12:22.600" endtime="20221023 19:12:23.169"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221023 19:12:23.307" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221023 19:12:23.169" endtime="20221023 19:12:23.307"/>
+</kw>
+<status status="PASS" starttime="20221023 19:12:14.078" endtime="20221023 19:12:23.308"/>
+</kw>
+<kw name="Supprimer un site" library="SupprimerSite">
+<arg>${vNomSite}</arg>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_HeaderSitesMenu}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:23.309" endtime="20221023 19:12:23.319"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_HeaderSitesMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:23.320" level="INFO">Clicking element 'id=HEADER_SITES_MENU_text'.</msg>
+<status status="PASS" starttime="20221023 19:12:23.320" endtime="20221023 19:12:23.361"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_MesSites}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:23.361" endtime="20221023 19:12:23.589"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_MesSites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:23.589" level="INFO">Clicking element 'xpath=//a[text()='Mes sites']'.</msg>
+<status status="PASS" starttime="20221023 19:12:23.589" endtime="20221023 19:12:23.887"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_SiteTest1}${vNomSite}${lnk_SiteTest2}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:23.888" endtime="20221023 19:12:23.899"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_SiteTest1}${vNomSite}${lnk_SiteTest2}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:23.901" level="INFO">Clicking element 'xpath=//a[text()='SiteTestIurie']'.</msg>
+<status status="PASS" starttime="20221023 19:12:23.899" endtime="20221023 19:12:24.478"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:27.480" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 19:12:24.478" endtime="20221023 19:12:27.480"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${btn_SiteConfig}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:27.481" endtime="20221023 19:12:27.495"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_SiteConfig}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:27.495" level="INFO">Clicking element 'id=HEADER_SITE_CONFIGURATION_DROPDOWN'.</msg>
+<status status="PASS" starttime="20221023 19:12:27.495" endtime="20221023 19:12:27.536"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_SuppSite}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:27.537" endtime="20221023 19:12:27.548"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_SuppSite}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:27.549" level="INFO">Clicking element 'xpath=//td[@id='HEADER_DELETE_SITE_text']'.</msg>
+<status status="PASS" starttime="20221023 19:12:27.549" endtime="20221023 19:12:27.602"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${btn_OkSupp}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:27.602" endtime="20221023 19:12:27.615"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_OkSupp}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:27.615" level="INFO">Clicking element 'xpath=//span[@id='ALF_SITE_SERVICE_DIALOG_CONFIRMATION_label']'.</msg>
+<status status="PASS" starttime="20221023 19:12:27.615" endtime="20221023 19:12:27.655"/>
+</kw>
+<kw name="Reload Page" library="SeleniumLibrary">
+<doc>Simulates user reloading page.</doc>
+<status status="PASS" starttime="20221023 19:12:27.655" endtime="20221023 19:12:28.150"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_HeaderSitesMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:28.151" level="INFO">Clicking element 'id=HEADER_SITES_MENU_text'.</msg>
+<status status="PASS" starttime="20221023 19:12:28.150" endtime="20221023 19:12:28.202"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${lnk_MesSites}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:28.202" endtime="20221023 19:12:28.449"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${lnk_MesSites}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:28.451" level="INFO">Clicking element 'xpath=//a[text()='Mes sites']'.</msg>
+<status status="PASS" starttime="20221023 19:12:28.450" endtime="20221023 19:12:28.844"/>
+</kw>
+<kw name="Page Should Not Contain" library="SeleniumLibrary">
+<arg>${lnk_SiteTest1}${vNomSite}${lnk_SiteTest2}</arg>
+<doc>Verifies the current page does not contain ``text``.</doc>
+<msg timestamp="20221023 19:12:28.870" level="INFO">Current page does not contain text 'xpath=//a[text()='SiteTestIurie']'.</msg>
+<status status="PASS" starttime="20221023 19:12:28.844" endtime="20221023 19:12:28.870"/>
+</kw>
+<status status="PASS" starttime="20221023 19:12:23.308" endtime="20221023 19:12:28.870"/>
+</kw>
+<kw name="Vider la Corbeille" library="ViderCorbeille">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderUser}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:28.871" level="INFO">Clicking element '//span[@id='HEADER_USER_MENU_POPUP_text']'.</msg>
+<status status="PASS" starttime="20221023 19:12:28.871" endtime="20221023 19:12:28.921"/>
+</kw>
+<kw name="Wait Until Page Contains Element" library="SeleniumLibrary">
+<arg>${link_MonProfil}</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" starttime="20221023 19:12:28.922" endtime="20221023 19:12:28.936"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_MonProfil}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:28.937" level="INFO">Clicking element '//a[normalize-space()='Mon profil']'.</msg>
+<status status="PASS" starttime="20221023 19:12:28.937" endtime="20221023 19:12:29.336"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_Corbeille}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:29.336" level="INFO">Clicking element '//a[normalize-space()='Corbeille']'.</msg>
+<status status="PASS" starttime="20221023 19:12:29.336" endtime="20221023 19:12:29.613"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_Supprimer}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:29.614" level="INFO">Clicking element '//div[@class='empty-button']//button[@type='button']'.</msg>
+<status status="PASS" starttime="20221023 19:12:29.613" endtime="20221023 19:12:29.688"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221023 19:12:32.698" level="INFO">Slept 3 seconds</msg>
+<status status="PASS" starttime="20221023 19:12:29.688" endtime="20221023 19:12:32.698"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${btn_Login_OkSupCorbeille}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:32.700" level="INFO">Clicking element '//button[text()='OK']'.</msg>
+<status status="PASS" starttime="20221023 19:12:32.699" endtime="20221023 19:12:32.774"/>
+</kw>
+<status status="PASS" starttime="20221023 19:12:28.871" endtime="20221023 19:12:32.775"/>
+</kw>
+<kw name="Logout" library="Logout">
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221023 19:12:32.776" endtime="20221023 19:12:32.801"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderUserMenu}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:32.801" level="INFO">Clicking element 'id=HEADER_USER_MENU_POPUP'.</msg>
+<status status="PASS" starttime="20221023 19:12:32.801" endtime="20221023 19:12:32.841"/>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20221023 19:12:32.841" endtime="20221023 19:12:32.864"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${link_HeaderDeconnexion}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221023 19:12:32.865" level="INFO">Clicking element 'id=HEADER_USER_MENU_LOGOUT'.</msg>
+<status status="PASS" starttime="20221023 19:12:32.864" endtime="20221023 19:12:32.904"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221023 19:12:32.904" endtime="20221023 19:12:35.090"/>
+</kw>
+<status status="PASS" starttime="20221023 19:12:32.775" endtime="20221023 19:12:35.091"/>
+</kw>
+<status status="PASS" starttime="20221023 19:11:50.648" endtime="20221023 19:12:35.092"/>
+</test>
+<status status="PASS" starttime="20221023 19:11:50.411" endtime="20221023 19:12:35.097"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="RQ3.BF6.2DeplacerUnEvenementEnModJour">RQ3.BF6.2DeplacerUnEvenementEnModJour</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
